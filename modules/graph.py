@@ -15,6 +15,9 @@ def plot(X, Y, linear_spline, x_interpolate=None, y_interpolate=None):
 	max_x = max(X)*1.25
 	min_y = min(Y) - np.abs(max(Y)*0.25)
 	max_y = max(Y)*1.25
+	plt.xlabel('x')
+	plt.ylabel('f(x)')
+	plt.title('Linear Spline Interpolation')
 
 	# Plot interpolated values
 	if x_interpolate is not None:
@@ -31,9 +34,6 @@ def plot(X, Y, linear_spline, x_interpolate=None, y_interpolate=None):
 		x_text_position = x_interpolate + 0.2
 		y_text_position = y_interpolate + 0.2
 		plt.text(x_text_position, y_text_position, '({:.3f}, {:.3f})'.format(x_interpolate, y_interpolate), fontsize=13.75)
-		plt.xlabel('x')
-		plt.ylabel('f(x)')
-		plt.title('Linear Spline Interpolation')
-
+		
 	
 	plt.axis([min_x, max_x, min_y, max_y])
