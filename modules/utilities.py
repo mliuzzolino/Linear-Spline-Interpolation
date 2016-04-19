@@ -182,7 +182,7 @@ def check_existing_files(folder, suffix=None):
 
 def data_logger(inter_x, inter_y, outfile_name):
 	with open(outfile_name, 'a') as outfile:
-		line = "{},{}\n".format(inter_x, inter_y)
+		line = "{:.3f},{:.3f}\n".format(inter_x, inter_y)
 		outfile.write(line)
 
 
